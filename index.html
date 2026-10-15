@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal portfolio of Romm Aldred L. Abaya, web developer.">
+  <title>Romm Aldred L. Abaya | Web Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a href="#home" class="brand">Romm Abaya</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 1. HOME -->
+    <section id="home" class="section hero">
+      <div class="hero-text">
+        <h1>Romm Aldred L. Abaya</h1>
+        <p class="tagline">Web developer who wants to excel in his passion: coding.</p>
+        <p class="intro">I build databases, cyber security projects and simple websites. I am still early in my experience and ready to learn on the job through an internship.</p>
+        <div class="cta-group">
+          <a href="#projects" class="btn btn-primary">View my projects</a>
+          <a href="#contact" class="btn btn-ghost">Contact me</a>
+        </div>
+      </div>
+      <img class="profile-photo" src="images/image2/rom.jpg" alt="Profile photo of Romm Aldred L. Abaya" width="280" height="280">
+    </section>
+
+    <!-- 2. ABOUT -->
+    <section id="about" class="section">
+      <h2>About me</h2>
+      <div class="grid grid-2">
+        <article class="glass">
+          <h3>Biography</h3>
+          <p>I am a web developer from Calaocan, Bambang, N.V. I am a person who wants to excel in his passion, and my passion is coding. My experience is still limited, but I keep growing by building databases, cyber security projects and simple websites.</p>
+        </article>
+        <article class="glass">
+          <h3>Education</h3>
+          <p><strong>Elementary:</strong> Completed</p>
+          <p><strong>Secondary:</strong> Completed</p>
+          <p><strong>College:</strong> Up to 2nd year</p>
+        </article>
+        <article class="glass">
+          <h3>Career goals</h3>
+          <p>Gain real experience through an internship, become a skilled web developer, and excel in coding.</p>
+        </article>
+        <article class="glass">
+          <h3>Interests</h3>
+          <p>Coding, databases, cyber security, and building simple websites.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3. SKILLS -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <div class="grid grid-2">
+        <article class="glass">
+          <h3>Technical skills</h3>
+          <ul class="chips">
+            <li>Coding</li><li>Database design</li><li>Cyber security basics</li><li>Simple website building</li>
+          </ul>
+        </article>
+        <article class="glass">
+          <h3>Programming languages</h3>
+          <ul class="chips">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>SQL</li>
+          </ul>
+        </article>
+        <article class="glass">
+          <h3>Tools and technologies</h3>
+          <ul class="chips">
+            <li>Git and GitHub</li><li>MySQL</li><li>VS Code</li><li>Browser DevTools</li>
+          </ul>
+        </article>
+        <article class="glass">
+          <h3>Soft skills</h3>
+          <ul class="chips">
+            <li>Problem solving</li><li>Teamwork</li><li>Communication</li><li>Willingness to learn</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. PROJECTS (loaded from data/projects.json) -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="filter-bar" id="filter-bar" aria-label="Filter projects by technology"></div>
+      <div class="grid grid-3" id="project-list" aria-live="polite">
+        <p class="status">Loading projects...</p>
+      </div>
+    </section>
+
+    <!-- 5. LATEST GITHUB REPOSITORIES (REST API) -->
+    <section id="repos" class="section">
+      <h2>Latest GitHub repositories</h2>
+      <ul class="repo-list" id="repo-list" aria-live="polite">
+        <li class="status">Loading repositories...</li>
+      </ul>
+    </section>
+
+    <!-- 6. CONTACT -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="grid grid-2">
+        <article class="glass">
+          <h3>Get in touch</h3>
+          <ul class="contact-links">
+            <li><strong>Email:</strong> <a href="mailto:rommaldred2829@gmail.com">rommaldred2829@gmail.com</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/rommaldred2829-create" target="_blank" rel="noopener">github.com/rommaldred2829-create</a></li>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rommaldred2829-create" target="_blank" rel="noopener">linkedin.com/in/rommaldred2829-create</a></li>
+          </ul>
+        </article>
+        <article class="glass">
+          <h3>Send a message</h3>
+          <form id="contact-form" novalidate>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name">
+            <span class="error" id="name-error"></span>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email">
+            <span class="error" id="email-error"></span>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+            <span class="error" id="message-error"></span>
+
+            <button type="submit" class="btn btn-primary">Send message</button>
+            <p class="form-success" id="form-success" role="status" hidden>Thank you! Your message was received.</p>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Romm Aldred L. Abaya. Built with HTML, CSS and JavaScript.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

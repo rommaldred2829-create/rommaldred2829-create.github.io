@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Database Project",
+    "description": "A database-driven project for storing, searching, editing and deleting records using MySQL.",
+    "technologies": ["PHP", "MySQL", "HTML", "CSS"],
+    "role": "Developer: designed the tables and wrote the queries",
+    "screenshot": "project1.png",
+    "link": "https://github.com/rommaldred2829-create/database-project"
+  },
+  {
+    "title": "Cyber Security Project",
+    "description": "A project on protecting web applications, covering password hashing, input validation and safe database queries.",
+    "technologies": ["PHP", "MySQL", "JavaScript", "Cyber security"],
+    "role": "Developer: built the secure features and tested them",
+    "screenshot": "project2.png",
+    "link": "https://github.com/rommaldred2829-create/cyber-security-project"
+  },
+  {
+    "title": "Simple Website",
+    "description": "A simple, responsive website with several sections that works on phones and laptops.",
+    "technologies": ["HTML", "CSS", "JavaScript", "Git"],
+    "role": "Developer: wrote the HTML and CSS and deployed it",
+    "screenshot": "project3.png",
+    "link": "https://github.com/rommaldred2829-create/simple-website"
+  }
+]
