@@ -106,7 +106,7 @@
 
   /* GitHub connection: set your username and repository name here, once.
      Every "Source Code" button and GitHub link on the page then points to your repo. */
-  const GITHUB = { user: 'your-username', repo: 'portfolio', branch: 'main' };
+  const GITHUB = { user: 'rommaldred2829-create', repo: 'rommaldred2829-create.github.io', branch: 'main' };
   const ghReady = GITHUB.user && GITHUB.user !== 'your-username';
   const ghUrl = path => {
     if (!ghReady) return '';
