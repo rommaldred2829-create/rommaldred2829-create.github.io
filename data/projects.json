@@ -13,7 +13,7 @@
     "technologies": ["PHP", "MySQL", "JavaScript", "Cyber security"],
     "role": "Developer: built the secure features and tested them",
     "screenshot": "project2.png",
-    "link": "https://github.com/rommaldred2829-create/cyber-security-project"
+    "link": "https://github.com/rommaldred2829-create/projects/password-checker/index.html"
   },
   {
     "title": "Simple Website",
@@ -21,6 +21,6 @@
     "technologies": ["HTML", "CSS", "JavaScript", "Git"],
     "role": "Developer: wrote the HTML and CSS and deployed it",
     "screenshot": "project3.png",
-    "link": "https://github.com/rommaldred2829-create/index.html"
+    "link": "https://github.com/rommaldred2829-create/projects/nusiness-website/index.html"
   }
 ]
