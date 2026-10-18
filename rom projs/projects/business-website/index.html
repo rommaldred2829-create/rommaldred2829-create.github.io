@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bambang Brew | Sample coffee shop website</title>
+<meta name="description" content="Sample small business website: a fictional coffee shop.">
+<style>
+:root{--cream:#faf5ee;--ink:#2b1d14;--brown:#6f4a2f;--gold:#c8893b;--card:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font:17px/1.65 Georgia,"Times New Roman",serif}
+a{color:inherit}
+.wrap{width:min(1000px,100% - 32px);margin-inline:auto}
+header{position:sticky;top:0;background:rgba(250,245,238,.95);border-bottom:1px solid #e6d8c6;z-index:10}
+header .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 20px;padding:12px 0}
+.brand{font-weight:700;font-size:1.3rem;text-decoration:none;color:var(--brown)}
+nav{display:flex;gap:18px;font:600 .95rem system-ui,sans-serif}
+nav a{text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}
+nav a:hover,nav a:focus-visible{border-color:var(--gold);outline:none}
+.hero{padding:88px 0;text-align:center;background:linear-gradient(rgba(43,29,20,.62),rgba(43,29,20,.62)),linear-gradient(135deg,#6f4a2f,#c8893b);color:#fff}
+.hero h1{font-size:clamp(2.2rem,6vw,3.6rem);margin:0 0 12px}
+.hero p{max-width:46ch;margin:0 auto 24px;font-size:1.15rem}
+.btn{display:inline-block;padding:12px 26px;border-radius:99px;background:var(--gold);color:#2b1d14;font:700 1rem system-ui,sans-serif;text-decoration:none;transition:transform .2s}
+.btn:hover{transform:translateY(-3px)}
+section{padding:64px 0}
+h2{font-size:2rem;margin:0 0 24px;color:var(--brown)}
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.item{background:var(--card);border:1px solid #e6d8c6;border-radius:14px;padding:20px}
+.item h3{margin:0 0 4px}
+.item p{margin:0 0 10px;color:#6b5b4d;font-size:.95rem}
+.price{font:700 1.05rem system-ui,sans-serif;color:var(--brown)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.photo{aspect-ratio:4/3;border-radius:16px;background:linear-gradient(135deg,#c8893b,#6f4a2f);display:grid;place-items:center;font-size:4rem}
+.info{background:var(--brown);color:#fff}
+.info h2{color:#fff}
+.info .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;font-family:system-ui,sans-serif}
+footer{padding:24px 0;text-align:center;font:.9rem system-ui,sans-serif;color:#6b5b4d}
+footer a{color:var(--brown)}
+@media(max-width:700px){.about{grid-template-columns:1fr}.hero{padding:64px 0}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top">&#9749; Bambang Brew</a>
+    <nav aria-label="Main"><a href="#menu">Menu</a><a href="#about">About</a><a href="#visit">Visit</a></nav>
+  </div>
+</header>
+<main id="top">
+  <div class="hero"><div class="wrap">
+    <h1>Fresh coffee, slow mornings</h1>
+    <p>Locally roasted beans, homemade pastries and a quiet corner to work or catch up.</p>
+    <a class="btn" href="#menu">See the menu</a>
+  </div></div>
+
+  <section id="menu"><div class="wrap">
+    <h2>Our menu</h2>
+    <div class="menu">
+      <article class="item"><h3>Brewed Coffee</h3><p>Medium roast, served hot or iced.</p><span class="price">&#8369;80</span></article>
+      <article class="item"><h3>Caramel Latte</h3><p>Espresso, steamed milk and caramel.</p><span class="price">&#8369;120</span></article>
+      <article class="item"><h3>Iced Mocha</h3><p>Chocolate, espresso and cold milk.</p><span class="price">&#8369;130</span></article>
+      <article class="item"><h3>Banana Bread</h3><p>Baked fresh every morning.</p><span class="price">&#8369;70</span></article>
+    </div>
+  </div></section>
+
+  <section id="about"><div class="wrap about">
+    <div class="photo" role="img" aria-label="Illustration of a coffee cup">&#9749;</div>
+    <div>
+      <h2>About us</h2>
+      <p>Bambang Brew started as a small cart and grew into a cozy shop for students, remote workers and neighbors. We buy beans from local farmers and bake everything in-house.</p>
+      <p><em>This is a sample project: the business is fictional.</em></p>
+    </div>
+  </div></section>
+
+  <section id="visit" class="info"><div class="wrap">
+    <h2>Visit us</h2>
+    <div class="cols">
+      <div><strong>Hours</strong><br>Mon to Sat: 7am to 8pm<br>Sunday: 8am to 5pm</div>
+      <div><strong>Location</strong><br>Sample Street, Bambang<br>Nueva Vizcaya</div>
+      <div><strong>Contact</strong><br>hello@example.com<br>0900 000 0000</div>
+    </div>
+  </div></section>
+</main>
+<footer>&copy; 2026 Bambang Brew (sample) &middot; <a href="../../index.html">Back to portfolio</a></footer>
+</body>
+</html>
