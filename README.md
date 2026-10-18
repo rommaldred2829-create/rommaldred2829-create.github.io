@@ -1,45 +1,23 @@
-# Personal Student Portfolio (rommaldred2829-create.github.io)
+# Student Records (PHP + MySQL)
 
-Static portfolio: HTML + CSS + JavaScript, project data from `data/projects.json`,
-live repositories from the GitHub REST API.
+A small admin app to add, search, edit and delete student records.
 
-## Before you start
-1. Rename this folder to `<your-github-username>.github.io`.
-2. In `js/script.js` set `GITHUB_USERNAME`.
-3. In `index.html` and `data/projects.json` replace `rommaldred2829-create` and the LinkedIn link, and add your school name and program to the About section.
-4. Replace `images/profile.jpg` and the `project*.png` placeholders with real photos/screenshots (profile under 500 KB).
+## Run it locally (XAMPP)
+1. Copy this folder into `htdocs` and start Apache and MySQL.
+2. Import `schema.sql` in phpMyAdmin.
+3. Copy `config.sample.php` to `config.php` and fill in your database details.
+4. Create an admin password hash and paste it into `admin_hash`:
+   `php -r "echo password_hash('your-strong-password', PASSWORD_DEFAULT);"`
+5. Open `http://localhost/student-records/`.
 
-## Run locally
-Open the folder in VS Code and click **Go Live** (http://127.0.0.1:5500).
-Opening index.html directly from disk blocks the JSON request.
+## Run it on InfinityFree
+1. Create a MySQL database in the control panel, then import `schema.sql` in phpMyAdmin (skip the first two lines).
+2. Upload this folder, create `config.php` there with the host, database name, user and password from the panel.
 
-## Upload and deploy
-```
-git init
-git add .
-git commit -m "First version of my portfolio"
-git branch -M main
-git remote add origin https://github.com/rommaldred2829-create/rommaldred2829-create.github.io.git
-git push -u origin main
-```
-Then: repository **Settings > Pages > Deploy from a branch > main / (root) > Save**.
-Wait for the green check in **Actions**, open https://rommaldred2829-create.github.io, tick **Enforce HTTPS**.
-
-## Update the live site
-```
-git add .
-git commit -m "Describe what you changed"
-git push
-```
-Refresh with Ctrl+F5.
-
-## Network-tab checkpoint (fill in)
-| Request | Method | Status | Response type |
-|---|---|---|---|
-| projects.json | GET | 200 | json |
-| api.github.com/users/.../repos | GET | 200 | json |
-
-## Three personal CSS changes (rubric B)
-1. Mint-green accent with deep navy background (`--accent`, `--bg`)
-2. Glassmorphism cards (`.glass`: blur + translucent border)
-3. Sora headings paired with Source Sans 3 body text
+## Security notes
+- Every query uses PDO prepared statements, so user input cannot change the SQL.
+- Output is escaped with `htmlspecialchars` to prevent XSS.
+- Changes are POST-only and protected by a CSRF token.
+- Access needs the admin password (stored only as a hash); the session ID is renewed after login.
+- `config.php` is listed in `.gitignore`, so passwords never reach GitHub.
+- GitHub Pages cannot run PHP, so this project needs PHP hosting such as InfinityFree or XAMPP.

@@ -1,158 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal portfolio of Romm Aldred L. Abaya, web developer.">
-  <title>Romm Aldred L. Abaya | Web Developer Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bambang Brew | Sample coffee shop website</title>
+<meta name="description" content="Sample small business website: a fictional coffee shop.">
+<style>
+:root{--cream:#faf5ee;--ink:#2b1d14;--brown:#6f4a2f;--gold:#c8893b;--card:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font:17px/1.65 Georgia,"Times New Roman",serif}
+a{color:inherit}
+.wrap{width:min(1000px,100% - 32px);margin-inline:auto}
+header{position:sticky;top:0;background:rgba(250,245,238,.95);border-bottom:1px solid #e6d8c6;z-index:10}
+header .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 20px;padding:12px 0}
+.brand{font-weight:700;font-size:1.3rem;text-decoration:none;color:var(--brown)}
+nav{display:flex;gap:18px;font:600 .95rem system-ui,sans-serif}
+nav a{text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}
+nav a:hover,nav a:focus-visible{border-color:var(--gold);outline:none}
+.hero{padding:88px 0;text-align:center;background:linear-gradient(rgba(43,29,20,.62),rgba(43,29,20,.62)),linear-gradient(135deg,#6f4a2f,#c8893b);color:#fff}
+.hero h1{font-size:clamp(2.2rem,6vw,3.6rem);margin:0 0 12px}
+.hero p{max-width:46ch;margin:0 auto 24px;font-size:1.15rem}
+.btn{display:inline-block;padding:12px 26px;border-radius:99px;background:var(--gold);color:#2b1d14;font:700 1rem system-ui,sans-serif;text-decoration:none;transition:transform .2s}
+.btn:hover{transform:translateY(-3px)}
+section{padding:64px 0}
+h2{font-size:2rem;margin:0 0 24px;color:var(--brown)}
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.item{background:var(--card);border:1px solid #e6d8c6;border-radius:14px;padding:20px}
+.item h3{margin:0 0 4px}
+.item p{margin:0 0 10px;color:#6b5b4d;font-size:.95rem}
+.price{font:700 1.05rem system-ui,sans-serif;color:var(--brown)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.photo{aspect-ratio:4/3;border-radius:16px;background:linear-gradient(135deg,#c8893b,#6f4a2f);display:grid;place-items:center;font-size:4rem}
+.info{background:var(--brown);color:#fff}
+.info h2{color:#fff}
+.info .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;font-family:system-ui,sans-serif}
+footer{padding:24px 0;text-align:center;font:.9rem system-ui,sans-serif;color:#6b5b4d}
+footer a{color:var(--brown)}
+@media(max-width:700px){.about{grid-template-columns:1fr}.hero{padding:64px 0}}
+</style>
 </head>
 <body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top">&#9749; Bambang Brew</a>
+    <nav aria-label="Main"><a href="#menu">Menu</a><a href="#about">About</a><a href="#visit">Visit</a></nav>
+  </div>
+</header>
+<main id="top">
+  <div class="hero"><div class="wrap">
+    <h1>Fresh coffee, slow mornings</h1>
+    <p>Locally roasted beans, homemade pastries and a quiet corner to work or catch up.</p>
+    <a class="btn" href="#menu">See the menu</a>
+  </div></div>
 
-  <!-- NAVIGATION -->
-  <header class="site-header">
-    <nav class="navbar" aria-label="Main navigation">
-      <a href="#home" class="brand">Romm Abaya</a>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <section id="menu"><div class="wrap">
+    <h2>Our menu</h2>
+    <div class="menu">
+      <article class="item"><h3>Brewed Coffee</h3><p>Medium roast, served hot or iced.</p><span class="price">&#8369;80</span></article>
+      <article class="item"><h3>Caramel Latte</h3><p>Espresso, steamed milk and caramel.</p><span class="price">&#8369;120</span></article>
+      <article class="item"><h3>Iced Mocha</h3><p>Chocolate, espresso and cold milk.</p><span class="price">&#8369;130</span></article>
+      <article class="item"><h3>Banana Bread</h3><p>Baked fresh every morning.</p><span class="price">&#8369;70</span></article>
+    </div>
+  </div></section>
 
-  <main>
-    <!-- 1. HOME -->
-    <section id="home" class="section hero">
-      <div class="hero-text">
-        <h1>Romm Aldred L. Abaya</h1>
-        <p class="tagline">Web developer who wants to excel in his passion: coding.</p>
-        <p class="intro">I build databases, cyber security projects and simple websites. I am still early in my experience and ready to learn on the job through an internship.</p>
-        <div class="cta-group">
-          <a href="#projects" class="btn btn-primary">View my projects</a>
-          <a href="#contact" class="btn btn-ghost">Contact me</a>
-        </div>
-      </div>
-      <img class="profile-photo" src="images/image2/rom.jpg" alt="Profile photo of Romm Aldred L. Abaya" width="280" height="280">
-    </section>
+  <section id="about"><div class="wrap about">
+    <div class="photo" role="img" aria-label="Illustration of a coffee cup">&#9749;</div>
+    <div>
+      <h2>About us</h2>
+      <p>Bambang Brew started as a small cart and grew into a cozy shop for students, remote workers and neighbors. We buy beans from local farmers and bake everything in-house.</p>
+      <p><em>This is a sample project: the business is fictional.</em></p>
+    </div>
+  </div></section>
 
-    <!-- 2. ABOUT -->
-    <section id="about" class="section">
-      <h2>About me</h2>
-      <div class="grid grid-2">
-        <article class="glass">
-          <h3>Biography</h3>
-          <p>I am a web developer from Calaocan, Bambang, N.V. I am a person who wants to excel in his passion, and my passion is coding. My experience is still limited, but I keep growing by building databases, cyber security projects and simple websites.</p>
-        </article>
-        <article class="glass">
-          <h3>Education</h3>
-          <p><strong>Elementary:</strong> Completed</p>
-          <p><strong>Secondary:</strong> Completed</p>
-          <p><strong>College:</strong> Up to 2nd year</p>
-        </article>
-        <article class="glass">
-          <h3>Career goals</h3>
-          <p>Gain real experience through an internship, become a skilled web developer, and excel in coding.</p>
-        </article>
-        <article class="glass">
-          <h3>Interests</h3>
-          <p>Coding, databases, cyber security, and building simple websites.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- 3. SKILLS -->
-    <section id="skills" class="section">
-      <h2>Skills</h2>
-      <div class="grid grid-2">
-        <article class="glass">
-          <h3>Technical skills</h3>
-          <ul class="chips">
-            <li>Coding</li><li>Database design</li><li>Cyber security basics</li><li>Simple website building</li>
-          </ul>
-        </article>
-        <article class="glass">
-          <h3>Programming languages</h3>
-          <ul class="chips">
-            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>SQL</li>
-          </ul>
-        </article>
-        <article class="glass">
-          <h3>Tools and technologies</h3>
-          <ul class="chips">
-            <li>Git and GitHub</li><li>MySQL</li><li>VS Code</li><li>Browser DevTools</li>
-          </ul>
-        </article>
-        <article class="glass">
-          <h3>Soft skills</h3>
-          <ul class="chips">
-            <li>Problem solving</li><li>Teamwork</li><li>Communication</li><li>Willingness to learn</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <!-- 4. PROJECTS (loaded from data/projects.json) -->
-    <section id="projects" class="section">
-      <h2>Projects</h2>
-      <div class="filter-bar" id="filter-bar" aria-label="Filter projects by technology"></div>
-      <div class="grid grid-3" id="project-list" aria-live="polite">
-        <p class="status">Loading projects...</p>
-      </div>
-    </section>
-
-    <!-- 5. LATEST GITHUB REPOSITORIES (REST API) -->
-    <section id="repos" class="section">
-      <h2>Latest GitHub repositories</h2>
-      <ul class="repo-list" id="repo-list" aria-live="polite">
-        <li class="status">Loading repositories...</li>
-      </ul>
-    </section>
-
-    <!-- 6. CONTACT -->
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <div class="grid grid-2">
-        <article class="glass">
-          <h3>Get in touch</h3>
-          <ul class="contact-links">
-            <li><strong>Email:</strong> <a href="mailto:rommaldred2829@gmail.com">rommaldred2829@gmail.com</a></li>
-            <li><strong>GitHub:</strong> <a href="https://github.com/rommaldred2829-create" target="_blank" rel="noopener">github.com/rommaldred2829-create</a></li>
-            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rommaldred2829-create" target="_blank" rel="noopener">linkedin.com/in/rommaldred2829-create</a></li>
-          </ul>
-        </article>
-        <article class="glass">
-          <h3>Send a message</h3>
-          <form id="contact-form" novalidate>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" autocomplete="name">
-            <span class="error" id="name-error"></span>
-
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" autocomplete="email">
-            <span class="error" id="email-error"></span>
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5"></textarea>
-            <span class="error" id="message-error"></span>
-
-            <button type="submit" class="btn btn-primary">Send message</button>
-            <p class="form-success" id="form-success" role="status" hidden>Thank you! Your message was received.</p>
-          </form>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>&copy; 2026 Romm Aldred L. Abaya. Built with HTML, CSS and JavaScript.</p>
-  </footer>
-
-  <script src="js/script.js"></script>
+  <section id="visit" class="info"><div class="wrap">
+    <h2>Visit us</h2>
+    <div class="cols">
+      <div><strong>Hours</strong><br>Mon to Sat: 7am to 8pm<br>Sunday: 8am to 5pm</div>
+      <div><strong>Location</strong><br>Sample Street, Bambang<br>Nueva Vizcaya</div>
+      <div><strong>Contact</strong><br>hello@example.com<br>0900 000 0000</div>
+    </div>
+  </div></section>
+</main>
+<footer>&copy; 2026 Bambang Brew (sample) &middot; <a href="../../index.html">Back to portfolio</a></footer>
 </body>
 </html>
